@@ -77,8 +77,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-        if let touched = touched {
+        if let touched = touched as? TargetSpriteNode {
             print(touched.name!)
+            touched.hit()
         }
 
         print(touchedNodes.count)
